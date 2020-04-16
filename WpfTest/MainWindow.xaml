@@ -9,13 +9,13 @@
         xmlns:jio="clr-namespace:Jara.Xaml.Control.Extension;assembly=Jara.Xaml.ControlExtensions.NetStandard"
         >
 
-    <Grid jio:GridEx.Rows="~ * ~">
+    <Grid jio:GridEx.RowDefinitions="~ * ~">
         <Grid Grid.Row="0" Background="Red">
             <TextBlock Text="Hello WPF Standard" Margin="5" FontSize="20" />
         </Grid>
 
         <Grid Grid.Row="1" Background="Green">
-            <Grid jio:GridEx.Columns="* 2*">
+            <Grid jio:GridEx.ColumnDefinitions="* 2*">
                 <Grid Grid.Column="0">
                     <TextBlock Text="Content" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 </Grid>
@@ -31,7 +31,7 @@
                         <Grid Background="AntiqueWhite" Grid.Row="2" jio:GridEx.GridDefinitions="* * / * *">
                             <Grid jio:GridEx.RowColumn="0/0" Background="Cyan" />
                             <Grid jio:GridEx.RowColumn="0/1" Background="Magenta" />
-                            <Grid jio:GridEx.RowColumn="1/0 2" jio:GridEx.Columns="* * * *" Background="Yellow">
+                            <Grid jio:GridEx.RowColumn="1/0 2" jio:GridEx.ColumnDefinitions="* * * *" Background="Yellow">
                                 <TextBlock jio:GridEx.RowColumn="/0 4" Text="Column Span" VerticalAlignment="Center" HorizontalAlignment="Center"  />
                             </Grid>
 

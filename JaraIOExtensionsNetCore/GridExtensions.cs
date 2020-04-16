@@ -10,23 +10,23 @@ namespace Jara.Xaml.Control.Extension
         static char _defaultRowColSeparator = '/';
 
         #region RowDefinitions
-        public static readonly DependencyProperty RowsProperty = DependencyProperty.RegisterAttached(
-            "Rows",
+        public static readonly DependencyProperty RowDefinitionsProperty = DependencyProperty.RegisterAttached(
+            "RowDefinitions",
             typeof(string),
             typeof(Grid),
-            new PropertyMetadata("*", OnRowsPropertyChanged));
+            new PropertyMetadata("*", OnRowDefinitionsPropertyChanged));
 
-        public static string GetRows(DependencyObject element)
+        public static string GetRowDefinitions(DependencyObject element)
         {
-            return (string)element.GetValue(RowsProperty);
+            return (string)element.GetValue(RowDefinitionsProperty);
         }
 
-        public static void SetRows(DependencyObject element, string value)
+        public static void SetRowDefinitions(DependencyObject element, string value)
         {
-            element.SetValue(RowsProperty, value);
+            element.SetValue(RowDefinitionsProperty, value);
         }
 
-        private static void OnRowsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
+        private static void OnRowDefinitionsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
         {
             //var element = d as Grid;
 
@@ -72,23 +72,23 @@ namespace Jara.Xaml.Control.Extension
         #endregion
 
         #region ColumnDefinitions
-        public static readonly DependencyProperty ColumnsProperty = DependencyProperty.RegisterAttached(
-            "Columns",
+        public static readonly DependencyProperty ColumnDefinitionsProperty = DependencyProperty.RegisterAttached(
+            "ColumnDefinitions",
             typeof(string),
             typeof(Grid),
-            new PropertyMetadata("*", OnColumnsPropertyChanged));
+            new PropertyMetadata("*", OnColumnDefinitionsPropertyChanged));
 
-        public static string GetColumns(DependencyObject element)
+        public static string GetColumnDefinitions(DependencyObject element)
         {
-            return (string)element.GetValue(ColumnsProperty);
+            return (string)element.GetValue(ColumnDefinitionsProperty);
         }
 
-        public static void SetColumns(DependencyObject element, string value)
+        public static void SetColumnDefinitions(DependencyObject element, string value)
         {
-            element.SetValue(ColumnsProperty, value);
+            element.SetValue(ColumnDefinitionsProperty, value);
         }
 
-        private static void OnColumnsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
+        private static void OnColumnDefinitionsPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs args)
         {
             //var element = d as Grid;
 
