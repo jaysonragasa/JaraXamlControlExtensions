@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamTest.MainPage"
+             xmlns:jio="clr-namespace:Jara.Xaml.Control.Extension;assembly=Jara.Xaml.ControlExtensions.Xamarin"
+             >
+
+    <Grid>
+        <Grid jio:GridEx.RowDefinitions="~ * ~">
+            <Grid Grid.Row="0" BackgroundColor="Red">
+                <Label Text="Hello Xamarin.Forms" FontSize="20" Margin="5,5,5,5" />
+            </Grid>
+
+            <Grid Grid.Row="1" BackgroundColor="Green">
+                <Grid jio:GridEx.GridDefinitions="/* 2*">
+                    <Grid Grid.Column="0">
+                        <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
+                    </Grid>
+
+                    <Grid Grid.Column="1" BackgroundColor="Yellow">
+                        <Grid jio:GridEx.GridDefinitions="* * 3*">
+                            <Grid BackgroundColor="Accent" Grid.Row="0">
+                                <Label Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
+                            </Grid>
+                            <Grid BackgroundColor="AliceBlue" Grid.Row="1">
+                                <Label Text="Content 3" VerticalOptions="Center" HorizontalOptions="Center" />
+                            </Grid>
+                            <Grid BackgroundColor="AntiqueWhite"  Grid.Row="2" jio:GridEx.GridDefinitions="* * / * *" >
+                                <Grid jio:GridEx.RowColumn="0/0" BackgroundColor="Cyan" />
+                                <Grid jio:GridEx.RowColumn="0/1" BackgroundColor="Magenta" />
+                                <Grid jio:GridEx.RowColumn="1/0 2" jio:GridEx.ColumnDefinitions="* * * *" BackgroundColor="Yellow">
+                                    <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="/0 4" />
+                                </Grid>
+
+                                <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="0 / 0 2" />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2" BackgroundColor="Blue">
+                <Label Text="Footer" Margin="5"  />
+            </Grid>
+        </Grid>
+    </Grid>
+
+</ContentPage>
