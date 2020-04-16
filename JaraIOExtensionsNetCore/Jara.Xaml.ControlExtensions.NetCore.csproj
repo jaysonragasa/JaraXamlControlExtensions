@@ -5,6 +5,30 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>Jara.Xaml.ControlExtensions.NetCore</AssemblyName>
     <RootNamespace>Jara.Xaml.ControlExtensions.NetCore</RootNamespace>
+    <Version>1.3.0</Version>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <Authors>Jayson Ragasa</Authors>
+    <Company>JaraIO</Company>
+    <Description>An extension libraries for XAML controls using attached attributes. This contains GridExtensions</Description>
+    <Copyright>(c) JaraIO 2020</Copyright>
+    <PackageLicenseFile>LIC.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/jaysonragasa/JaraXamlControlExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jaysonragasa/JaraXamlControlExtensions</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>xaml</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LIC.txt" />
+    <None Include="LIC.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="LIC.txt" />
+  </ItemGroup>
 
 </Project>

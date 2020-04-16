@@ -4,10 +4,28 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Jara.Xaml.ControlExtensions.Xamarin</AssemblyName>
     <RootNamespace>Jara.Xaml.ControlExtensions.Xamarin</RootNamespace>
+    <Version>1.3.0</Version>
+    <Company>JaraIO</Company>
+    <Authors>Jayson Ragasa</Authors>
+    <Description>An extension libraries for XAML controls using attached attributes. This contains GridExtensions</Description>
+    <Copyright>(c) JaraIO 2020</Copyright>
+    <PackageLicenseFile>LIC.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/jaysonragasa/JaraXamlControlExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jaysonragasa/JaraXamlControlExtensions</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>xaml</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LIC.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JaraIOExtensionsNetStandard")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Jara.Xaml.ControlExtensions.NetStandard")]
+[assembly: AssemblyDescription("An extension libraries for XAML controls using attached attributes. This contains GridExtensions")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JaraIOExtensionsNetStandard")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyCompany("JaraIO")]
+[assembly: AssemblyProduct("Jara.Xaml.ControlExtensions.NetStandard")]
+[assembly: AssemblyCopyright("(c) JaraIO 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

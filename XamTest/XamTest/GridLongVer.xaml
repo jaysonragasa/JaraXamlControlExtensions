@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamTest.GridLongVer">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        
+        <Grid BackgroundColor="Red">
+            <Label Text="Hello Xamarin.Forms" FontSize="20" Margin="5,5,5,5" />
+        </Grid>
+
+        <Grid Grid.Row="1" BackgroundColor="Green">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid>
+                    <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
+                </Grid>
+
+                <Grid Grid.Column="1" BackgroundColor="Yellow">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="3*" />
+                        </Grid.RowDefinitions>
+                        
+                        <Grid BackgroundColor="Accent">
+                            <Label Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Grid>
+                        <Grid BackgroundColor="AliceBlue" Grid.Row="1">
+                            <Label Text="Content 3" VerticalOptions="Center" HorizontalOptions="Center" />
+                        </Grid>
+                        <Grid BackgroundColor="AntiqueWhite" Grid.Row="2" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid BackgroundColor="Cyan" />
+                            <Grid Grid.Column="1" BackgroundColor="Magenta" />
+                            <Grid Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="Yellow">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="4" />
+                            </Grid>
+
+                            <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" Grid.ColumnSpan="2" />
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" BackgroundColor="Blue">
+            <Label Text="Footer" Margin="5"  />
+        </Grid>
+    </Grid>
+</ContentPage>
