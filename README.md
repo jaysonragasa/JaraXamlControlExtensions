@@ -1,2 +1,2 @@
 # Read Me
-Here [](https://jaysonragasa.github.io/JaraXamlControlExtensions/)  
+Here https://jaysonragasa.github.io/JaraXamlControlExtensions
