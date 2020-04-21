@@ -18,7 +18,20 @@
         <Grid Grid.Row="1" Background="Green">
             <Grid jio:GridEx.ColumnDefinitions="* 2*">
                 <Grid Grid.Column="0">
-                    <TextBlock Text="Content" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Content" HorizontalAlignment="Center" />
+
+                        <Grid jio:GridEx.RowDefinitions="~ ~ ~ ~" Background="Red">
+                            <TextBlock jio:TextEx.TextLine="TextLine One\nTextLine Two" TextAlignment="Center" Grid.Row="1"/>
+                            <TextBlock Grid.Row="3" TextAlignment="Center">
+                                <Run Text="One" />
+                                <Run jio:TextEx.RunLine="RunEx 1" />
+                                <Run jio:TextEx.RunLine="RunEx 2\nRunEx 3" />
+                                <Run jio:TextEx.RunLine="RunEx 4" />
+                                <Run jio:TextEx.RunLine="RunEx 5" />
+                            </TextBlock>
+                        </Grid>
+                    </StackPanel>
                 </Grid>
 
                 <Grid Grid.Column="1" Background="Yellow">

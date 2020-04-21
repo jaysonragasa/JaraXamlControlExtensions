@@ -16,13 +16,36 @@
         <Grid Grid.Row="1" BackgroundColor="Green">
             <Grid jio:GridEx.GridDefinitions="/* 2*">
                 <Grid>
-                    <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                        <Label jio:TextEx.TextLine="Label Line 1\nLabel Line Two" HorizontalTextAlignment="Center" />
+
+                        <Label HorizontalTextAlignment="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="1" />
+                                    <Span jio:TextEx.SpanLine="hola\nnewline" />
+                                    <Span jio:TextEx.SpanLine="hola" />
+                                    <Span jio:TextEx.SpanLine="{Binding Text, Source={x:Reference lblContent2}}" />
+                                    <Span jio:TextEx.SpanLine="" />
+                                    <!--<Span Text="{jio:SpanEx TextLine='hola'}" />
+                                    <Span Text="{jio:SpanEx TextLine='hola'}" />
+                                    <Span Text="{jio:SpanEx TextLine='{Binding Text, Source={x:Reference lblContent2}}}'" />
+                                    <Span Text="{jio:SpanEx TextLine=''}" />
+                                    <Span Text="{Binding Text, Source={x:Reference lblContent2}}" />
+                                    <Span Text="{jio:SpanEx TextLine=''}" />-->
+                                    <Span Text="4" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
                 </Grid>
 
                 <Grid Grid.Column="1" BackgroundColor="Yellow">
                     <Grid jio:GridEx.GridDefinitions="* * 3*">
                         <Grid BackgroundColor="Accent">
-                            <Label Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label x:Name="lblContent2" Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
                         </Grid>
                         <Grid BackgroundColor="AliceBlue" Grid.Row="1">
                             <Label Text="Content 3" VerticalOptions="Center" HorizontalOptions="Center" />
