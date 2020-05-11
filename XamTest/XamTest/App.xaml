@@ -4,8 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamTest.App">
+             x:Class="XamTest.App"
+             
+             xmlns:conv="clr-namespace:Jara.Xaml.Control.Converters;assembly=Jara.Xaml.ControlExtensions.Xamarin"
+             >
     <Application.Resources>
-
+        <ResourceDictionary>
+            <conv:Converter_EvalFx x:Key="eval" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

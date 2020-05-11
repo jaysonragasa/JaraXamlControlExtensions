@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter_BooleanToReverseVisibility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter_BooleanToVisibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter_EvalFx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GridEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Constructs\FunctionOperation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Constructs\IConstruct.cs" />
@@ -26,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Engine\ExpressionParseOnDemand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Engine\Token.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Engine\Tokenizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interpreter\EvalFx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Functions\ArrayFunction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Functions\Average.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interpreter\Functions\Format.cs" />

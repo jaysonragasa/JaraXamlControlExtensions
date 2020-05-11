@@ -9,9 +9,13 @@
         xmlns:jio="clr-namespace:Jara.Xaml.Control.Extension;assembly=Jara.Xaml.ControlExtensions.NetCore"
         >
 
+    <Window.DataContext>
+        <local:ViewModelMainPage />
+    </Window.DataContext>
+
     <Grid jio:GridEx.RowDefinitions="~ * ~">
         <Grid Grid.Row="0" Background="Red">
-            <TextBlock Text="Hello WPF Core" Margin="5" FontSize="20" />
+            <TextBlock Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,5)'}" Margin="5" FontSize="20" />
         </Grid>
 
         <Grid Grid.Row="1" Background="Green">
@@ -56,7 +60,7 @@
         </Grid>
 
         <Grid Grid.Row="2" Background="Blue">
-            <TextBlock Text="Footer"  Margin="5"  />
+            <TextBlock Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,2)'}" Margin="5" FontSize="20" />
         </Grid>
     </Grid>
 </Window>

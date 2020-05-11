@@ -5,12 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamTest.MainPage"
+             xmlns:local="clr-namespace:XamTest"
              xmlns:jio="clr-namespace:Jara.Xaml.Control.Extension;assembly=Jara.Xaml.ControlExtensions.Xamarin"
              >
 
+    <ContentPage.BindingContext>
+        <local:ViewModelMainPage />
+    </ContentPage.BindingContext>
+
     <Grid jio:GridEx.RowDefinitions="~ * ~">
         <Grid Grid.Row="0" BackgroundColor="Red">
-            <Label Text="Hello Xamarin.Forms" FontSize="20" Margin="5,5,5,5" />
+            <Label Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,5)'}" FontSize="20" Margin="5,5,5,5" />
         </Grid>
 
         <Grid Grid.Row="1" BackgroundColor="Green">
@@ -66,7 +71,7 @@
         </Grid>
 
         <Grid Grid.Row="2" BackgroundColor="Blue">
-            <Label Text="Footer" Margin="5"  />
+            <Label Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,2)'}" FontSize="20" Margin="5,5,5,5" />
         </Grid>
     </Grid>
 

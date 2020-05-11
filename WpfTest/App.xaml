@@ -2,8 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfTest"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+             xmlns:conv="clr-namespace:Jara.Xaml.Control.Converters;assembly=Jara.Xaml.ControlExtensions.NetStandard"
+             >
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <conv:Converter_EvalFx x:Key="eval" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

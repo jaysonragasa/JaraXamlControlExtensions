@@ -2,6 +2,13 @@
     x:Class="UwpTest.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UwpTest">
+    xmlns:local="using:UwpTest"
+    xmlns:conv="using:Jara.Xaml.Control.Converters"
+    >
 
+    <Application.Resources>
+        <ResourceDictionary>
+            <conv:Converter_EvalFx x:Key="eval" />
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

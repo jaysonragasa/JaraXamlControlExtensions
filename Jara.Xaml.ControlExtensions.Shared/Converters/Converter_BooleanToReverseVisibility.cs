@@ -5,6 +5,8 @@ using System.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+#elif XAMARIN
+using Xamarin.Forms;
 #else
 using System.Windows;
 using System.Windows.Data;
@@ -23,7 +25,7 @@ namespace Jara.Xaml.Control.Converters
         {
             Visibility visibility = Visibility.Visible;
 
-            if(value is bool)
+            if (value is bool)
             {
                 visibility = (bool)value ? Visibility.Collapsed : Visibility.Visible;
             }

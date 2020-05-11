@@ -10,9 +10,13 @@
     xmlns:jio="using:Jara.Xaml.Control.Extension"
     >
 
+    <Page.DataContext>
+        <local:ViewModelMainPage />
+    </Page.DataContext>
+
     <Grid jio:GridEx.RowDefinitions="~ * ~">
         <Grid Grid.Row="0" Background="Red">
-            <TextBlock Text="Hello UWP" Margin="5" FontSize="20" />
+            <TextBlock Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,5)'}" Margin="5" FontSize="20" />
         </Grid>
 
         <Grid Grid.Row="1" Background="Green">
@@ -57,7 +61,7 @@
         </Grid>
 
         <Grid Grid.Row="2" Background="Blue">
-            <TextBlock Text="Footer"  Margin="5"  />
+            <TextBlock Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,5)'}" Margin="5" FontSize="20" />
         </Grid>
     </Grid>
 </Page>
