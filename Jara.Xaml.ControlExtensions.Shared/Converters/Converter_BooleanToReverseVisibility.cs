@@ -15,8 +15,7 @@ namespace Jara.Xaml.Control.Converters
     public class BooleanToReverseVisibility : IValueConverter
     {
 
-#if XAMARIN
-#elif WINDOWS_UWP
+#if WINDOWS_UWP
         public object Convert(object value, Type targetType, object parameter, string language)
 #else
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -32,8 +31,7 @@ namespace Jara.Xaml.Control.Converters
             return visibility;
         }
 
-#if XAMARIN
-#elif WINDOWS_UWP
+#if WINDOWS_UWP
         public object ConvertBack(object value, Type targetType, object parameter, string language)
 #else
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
