@@ -69,11 +69,11 @@ namespace Jara.Xaml.Control.Extension
 
         static string NewText(string newValue)
         {
-            string[] texts = newValue.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] texts = newValue.Split(new string[] { "\\n" }, StringSplitOptions.None);
 
             string newText = texts.Length > 1 ? string.Join("\r\n", texts) : newValue;
 
-            return newText.Trim();
+            return newText;
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Jara.Xaml.Control.Extension
 {
@@ -60,26 +59,11 @@ namespace Jara.Xaml.Control.Extension
 
         static string NewText(string newValue)
         {
-            string[] texts = newValue.Split(new string[] { "\\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] texts = newValue.Split(new string[] { "\\n" }, StringSplitOptions.None);
 
             string newText = texts.Length > 1 ? string.Join("\r\n", texts) : newValue;
 
-            return newText.Trim();
+            return newText;
         }
     }
-
-    public class LabelEx
-    {
-        
-    }
-
-    //public class SpanEx : IMarkupExtension
-    //{
-    //    public string TextLine { get; set; } = "";
-
-    //    public object ProvideValue(IServiceProvider serviceProvider)
-    //    {
-    //        return $"\n{TextLine}";
-    //    }
-    //}
 }

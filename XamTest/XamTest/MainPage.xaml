@@ -28,7 +28,8 @@
                                     <Span jio:TextEx.SpanLine="hola\nnewline" />
                                     <Span jio:TextEx.SpanLine="hola" />
                                     <Span jio:TextEx.SpanLine="{Binding Text, Source={x:Reference lblContent2}}" />
-                                    <Span jio:TextEx.SpanLine="" />
+                                    <Span jio:TextEx.SpanLine="\n\n\n" />
+                                    <Span Text="123" />
                                     <!--<Span Text="{jio:SpanEx TextLine='hola'}" />
                                     <Span Text="{jio:SpanEx TextLine='hola'}" />
                                     <Span Text="{jio:SpanEx TextLine='{Binding Text, Source={x:Reference lblContent2}}}'" />
