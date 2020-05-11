@@ -12,7 +12,7 @@ using System.Windows.Data;
 
 namespace Jara.Xaml.Control.Converters
 {
-    public class Converter_BooleanToVisibility : IValueConverter
+    public class BooleanToReverseVisibility : IValueConverter
     {
 
 #if XAMARIN
@@ -26,7 +26,7 @@ namespace Jara.Xaml.Control.Converters
 
             if(value is bool)
             {
-                visibility = (bool)value ? Visibility.Visible : Visibility.Collapsed;
+                visibility = (bool)value ? Visibility.Collapsed : Visibility.Visible;
             }
 
             return visibility;

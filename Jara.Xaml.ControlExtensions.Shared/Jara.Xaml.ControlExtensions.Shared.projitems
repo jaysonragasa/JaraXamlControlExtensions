@@ -9,6 +9,7 @@
     <Import_RootNamespace>Jara.Xaml.ControlExtensions.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter_BooleanToReverseVisibility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\Converter_BooleanToVisibility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GridEx.cs" />
   </ItemGroup>
