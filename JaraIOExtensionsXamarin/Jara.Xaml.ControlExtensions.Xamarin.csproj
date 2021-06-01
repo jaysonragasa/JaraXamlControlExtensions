@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Jara.Xaml.ControlExtensions.Xamarin</AssemblyName>
     <RootNamespace>Jara.Xaml.Control.Extension</RootNamespace>
-    <Version>1.4.3</Version>
+    <Version>1.5.0</Version>
     <Company>JaraIO</Company>
     <Authors>Jayson Ragasa</Authors>
     <Description>An extension libraries for XAML controls using attached attributes.</Description>
@@ -15,10 +15,14 @@
     <RepositoryType>github</RepositoryType>
     <PackageTags>xaml</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.4.3.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;XAMARIN</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>TRACE;XAMARIN</DefineConstants>
   </PropertyGroup>
 

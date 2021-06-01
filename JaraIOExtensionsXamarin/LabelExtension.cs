@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Jara.Xaml.Control.Extension
 {
-    public class TextEx
+    public class LabelEx
     {
         #region TextBlock
         public static readonly BindableProperty TextLineProperty = BindableProperty.CreateAttached("TextLine", typeof(string), typeof(Span), "\r\n", defaultBindingMode: BindingMode.TwoWay, validateValue: null, propertyChanged: OnTextLinePropertyChanged);

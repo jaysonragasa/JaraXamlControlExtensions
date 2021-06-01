@@ -13,66 +13,68 @@
         <local:ViewModelMainPage />
     </ContentPage.BindingContext>
 
-    <Grid jio:GridEx.RowDefinitions="~ * ~">
-        <Grid Grid.Row="0" BackgroundColor="Red">
-            <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
-        </Grid>
+    <jio:ProgressView IsLoading="{Binding IsBusy}" BackdropColor="#7fff00ff" >
+        <Grid jio:GridEx.RowDefinitions="~ * ~">
+            <Grid Grid.Row="0" BackgroundColor="Red">
+                <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
+            </Grid>
 
-        <Grid Grid.Row="1" BackgroundColor="Green">
-            <Grid jio:GridEx.GridDefinitions="/* 2*">
-                <Grid>
-                    <StackLayout VerticalOptions="Center">
-                        <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Grid Grid.Row="1" BackgroundColor="Green">
+                <Grid jio:GridEx.GridDefinitions="/* 2*">
+                    <Grid>
+                        <StackLayout VerticalOptions="Center">
+                            <Label Text="Content" VerticalOptions="Center" HorizontalOptions="Center" />
 
-                        <Label jio:TextEx.TextLine="Label Line 1\nLabel Line Two" HorizontalTextAlignment="Center" />
+                            <Label jio:LabelEx.TextLine="Label Line 1\nLabel Line Two" HorizontalTextAlignment="Center" />
 
-                        <Label HorizontalTextAlignment="Center">
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="1" />
-                                    <Span jio:TextEx.SpanLine="hola\nnewline" />
-                                    <Span jio:TextEx.SpanLine="hola" />
-                                    <Span jio:TextEx.SpanLine="{Binding Text, Source={x:Reference lblContent2}}" />
-                                    <Span jio:TextEx.SpanLine="\n\n\n" />
-                                    <Span Text="123" />
-                                    <!--<Span Text="{jio:SpanEx TextLine='hola'}" />
+                            <Label HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="1" />
+                                        <Span jio:LabelEx.SpanLine="hola\nnewline" />
+                                        <Span jio:LabelEx.SpanLine="hola" />
+                                        <Span jio:LabelEx.SpanLine="{Binding Text, Source={x:Reference lblContent2}}" />
+                                        <Span jio:LabelEx.SpanLine="\n\n\n" />
+                                        <Span Text="123" />
+                                        <!--<Span Text="{jio:SpanEx TextLine='hola'}" />
                                     <Span Text="{jio:SpanEx TextLine='hola'}" />
                                     <Span Text="{jio:SpanEx TextLine='{Binding Text, Source={x:Reference lblContent2}}}'" />
                                     <Span Text="{jio:SpanEx TextLine=''}" />
                                     <Span Text="{Binding Text, Source={x:Reference lblContent2}}" />
                                     <Span Text="{jio:SpanEx TextLine=''}" />-->
-                                    <Span Text="4" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                    </StackLayout>
-                </Grid>
+                                        <Span Text="4" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
 
-                <Grid Grid.Column="1" BackgroundColor="Yellow">
-                    <Grid jio:GridEx.GridDefinitions="* * 3*">
-                        <Grid BackgroundColor="Accent">
-                            <Label x:Name="lblContent2" Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
-                        </Grid>
-                        <Grid BackgroundColor="AliceBlue" Grid.Row="1">
-                            <Label Text="Content 3" VerticalOptions="Center" HorizontalOptions="Center" />
-                        </Grid>
-                        <Grid BackgroundColor="AntiqueWhite"  Grid.Row="2" jio:GridEx.GridDefinitions="* * / * *" >
-                            <Grid BackgroundColor="Cyan" />
-                            <Grid jio:GridEx.RowColumn="/1" BackgroundColor="Magenta" />
-                            <Grid jio:GridEx.RowColumn="1/0 2" jio:GridEx.ColumnDefinitions="* * * *" BackgroundColor="Yellow">
-                                <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="/0 4" />
+                    <Grid Grid.Column="1" BackgroundColor="Yellow">
+                        <Grid jio:GridEx.GridDefinitions="* * 3*">
+                            <Grid BackgroundColor="Accent">
+                                <Label x:Name="lblContent2" Text="Content 2" VerticalOptions="Center" HorizontalOptions="Center" />
                             </Grid>
+                            <Grid BackgroundColor="AliceBlue" Grid.Row="1">
+                                <Label Text="Content 3" VerticalOptions="Center" HorizontalOptions="Center" />
+                            </Grid>
+                            <Grid BackgroundColor="AntiqueWhite"  Grid.Row="2" jio:GridEx.GridDefinitions="* * / * *" >
+                                <Grid BackgroundColor="Cyan" />
+                                <Grid jio:GridEx.RowColumn="/1" BackgroundColor="Magenta" />
+                                <Grid jio:GridEx.RowColumn="1/0 2" jio:GridEx.ColumnDefinitions="* * * *" BackgroundColor="Yellow">
+                                    <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="/0 4" />
+                                </Grid>
 
-                            <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="/ 0 2" />
+                                <Label Text="Column Span" VerticalOptions="Center" HorizontalOptions="Center" jio:GridEx.RowColumn="/ 0 2" />
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
-        </Grid>
 
-        <Grid Grid.Row="2" BackgroundColor="Blue">
-            <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
+            <Grid Grid.Row="2" BackgroundColor="Blue">
+                <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
+            </Grid>
         </Grid>
-    </Grid>
+    </jio:ProgressView>
 
 </ContentPage>
