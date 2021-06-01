@@ -1,5 +1,5 @@
 ﻿using HiSystems.Interpreter;
-using Jara.Xaml.ControlExtensions.Shared.Interpreter;
+using Jara.Xaml.Control.Extension.Interpreter;
 using System;
 using System.Globalization;
 
@@ -30,7 +30,7 @@ namespace Jara.Xaml.Control.Converters
                 string p = (string)parameter;
                 p = p.Trim();
 
-                var xp = EvalFx.Engine.Parse(p);
+                var xp = EvalFx.Fxn.Parse(p);
                 xp.Variables["x"].Value = new Text((string)value);
                 return xp.Execute<Text>().ToString();
             }

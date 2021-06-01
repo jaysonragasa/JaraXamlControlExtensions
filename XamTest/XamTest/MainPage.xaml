@@ -15,7 +15,7 @@
 
     <Grid jio:GridEx.RowDefinitions="~ * ~">
         <Grid Grid.Row="0" BackgroundColor="Red">
-            <Label Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,5)'}" FontSize="20" Margin="5,5,5,5" />
+            <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
         </Grid>
 
         <Grid Grid.Row="1" BackgroundColor="Green">
@@ -71,7 +71,7 @@
         </Grid>
 
         <Grid Grid.Row="2" BackgroundColor="Blue">
-            <Label Text="{Binding Title, Converter={StaticResource eval}, ConverterParameter='substring(x,0,2)'}" FontSize="20" Margin="5,5,5,5" />
+            <Label Text="{Binding Title}" FontSize="20" Margin="5,5,5,5" />
         </Grid>
     </Grid>
 

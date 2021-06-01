@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WpfCoreTest"
              StartupUri="MainWindow.xaml"
-             xmlns:conv="clr-namespace:Jara.Xaml.Control.Converters;assembly=Jara.Xaml.ControlExtensions.NetCore"
              >
     <Application.Resources>
         <ResourceDictionary>
-            <conv:Converter_EvalFx x:Key="eval" />
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -6,11 +6,13 @@
              mc:Ignorable="d"
              x:Class="XamTest.App"
              
-             xmlns:conv="clr-namespace:Jara.Xaml.Control.Converters;assembly=Jara.Xaml.ControlExtensions.Xamarin"
+            
              >
+            <!--xmlns:conv="clr-namespace:Jara.Xaml.Control.Converters;assembly=Jara.Xaml.ControlExtensions.Xamarin"-->
     <Application.Resources>
         <ResourceDictionary>
-            <conv:Converter_EvalFx x:Key="eval" />
+            <!--<conv:Converter_EvalFx x:Key="eval" />-->
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
